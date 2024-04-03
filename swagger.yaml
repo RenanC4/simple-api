@@ -1,0 +1,83 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Sierra Listing CRuD API
+  description: A simple CRD API for managing listings
+host: localhost:3000
+basePath: /
+schemes:
+  - http
+paths:
+  /listings:
+    post:
+      summary: Adds a new listing
+      description: The request body should be a JSON object representing the listing
+      parameters:
+        - in: body
+          name: listing
+          description: The listing to create
+          schema:
+            type: object
+            required:
+              - id
+              - title
+              - price
+              - description
+            properties:
+              id:
+                type: string
+              title:
+                type: string
+              price:
+                type: number
+              description:
+                type: string
+      responses:
+        200:
+          description: OK
+        409:
+          description: Conflict
+    get:
+      summary: Gets all listings
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Listing'
+  /listings/{id}:
+    delete:
+      summary: Deletes the listing with the specified ID
+      parameters:
+        - in: path
+          name: id
+          type: string
+          required: true
+          description: The ID of the listing to delete
+      responses:
+        200:
+          description: OK
+        404:
+          description: Not Found
+definitions:
+  Listing:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The unique identifier of the listing.
+      title:
+        type: string
+        description: The title of the listing.
+      price:
+        type: number
+        description: The price of the listing.
+      description:
+        type: string
+        description: The description of the listing.
+    required:
+      - id
+      - title
+      - price
+      - description
