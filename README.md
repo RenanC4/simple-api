@@ -1,8 +1,6 @@
 # Sierra Listing CRuD API
 
 
-This is a brief paragraph describing what your project does and what it's for.
-
 ## Installation
 
 First, clone the repository:
