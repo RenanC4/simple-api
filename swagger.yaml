@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: Sierra Listing CRuD API
+  title: Listing CRuD API
   description: A simple CRD API for managing listings
 host: localhost:3000
 basePath: /

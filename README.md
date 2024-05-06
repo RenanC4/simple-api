@@ -1,4 +1,4 @@
-# Sierra Listing CRuD API
+# Simple Listing CRuD API
 
 
 ## Installation
@@ -6,12 +6,12 @@
 First, clone the repository:
 
 ```bash
-git clone https://github.com/RenanC4/listing-api-sierra.git
+git clone https://github.com/RenanC4/simple-api.git
 ```
 
 Then, install the dependencies:
 ```bash
-cd listing-api-sierra
+cd simple-api
 npm install
 ```
 
